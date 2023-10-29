@@ -16,6 +16,11 @@
     public interface IReader
     {
         /// <summary>
+        /// Absolute zero temperature for Kelvin conversion
+        /// </summary>
+        public const float ABSOLUTE_ZERO_TEMP = -273.15f;
+
+        /// <summary>
         /// Returns a temperature in the given input scale
         /// </summary>
         /// <param name="scale">Desired temperature scale</param>

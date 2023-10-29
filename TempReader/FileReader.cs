@@ -14,11 +14,6 @@ namespace TempReader
         /// </summary>
         public const float THERMAL_ZONE_MULT = 1000.0f;
 
-        /// <summary>
-        /// Absolute zero temperature for Kelvin conversion
-        /// </summary>
-        public const float ABSOLUTE_ZERO_TEMP = -273.15f;
-
         public float Read(TempScale scale)
         {
             return scale switch

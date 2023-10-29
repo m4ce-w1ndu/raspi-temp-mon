@@ -58,7 +58,7 @@ namespace TempReader
             if (temp is float.NaN) return temp;
 
             // Perform conversion
-            return (Math.Abs(ABSOLUTE_ZERO_TEMP) + temp);
+            return (-(IReader.ABSOLUTE_ZERO_TEMP) + temp);
         }
 
         /// <summary>

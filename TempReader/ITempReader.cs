@@ -13,7 +13,7 @@
     /// <summary>
     /// Generic temperature reader interface
     /// </summary>
-    public interface IReader
+    public interface ITempReader
     {
         /// <summary>
         /// Absolute zero temperature for Kelvin conversion

@@ -2,7 +2,7 @@
 
 namespace TempReader
 {
-    public class FileReader : IReader
+    public class FileTempReader : ITempReader
     {
         /// <summary>
         /// Temperature thermal zone file
@@ -58,7 +58,7 @@ namespace TempReader
             if (temp is float.NaN) return temp;
 
             // Perform conversion
-            return (-(IReader.ABSOLUTE_ZERO_TEMP) + temp);
+            return (-(ITempReader.ABSOLUTE_ZERO_TEMP) + temp);
         }
 
         /// <summary>

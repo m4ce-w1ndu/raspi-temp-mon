@@ -28,7 +28,7 @@ namespace TempReader
         /// <summary>
         /// Reads Celsius temperature
         /// </summary>
-        private float ReadCelsius()
+        private static float ReadCelsius()
         {
             var tempValue = GetFloatTemperature();
             if (tempValue is float.NaN) return tempValue;
@@ -38,7 +38,7 @@ namespace TempReader
         /// <summary>
         /// Reads Farenheit temperature
         /// </summary>
-        private float ReadFarenheit()
+        private static float ReadFarenheit()
         {
             // Get the temp in Celsius
             var temp = ReadCelsius();
@@ -51,7 +51,7 @@ namespace TempReader
         /// <summary>
         /// Reads Kelvin temperature
         /// </summary>
-        private float ReadKelvin()
+        private static float ReadKelvin()
         {
             // Get celsius temperature
             var temp = ReadCelsius();
@@ -67,7 +67,7 @@ namespace TempReader
         /// that there is no floating point in the number represented.
         /// It must be added lated by dividing by 1000
         /// </summary>
-        private float GetFloatTemperature()
+        private static float GetFloatTemperature()
         {
             var temperatureString = GetPlainTextTemperature();
 
@@ -82,7 +82,7 @@ namespace TempReader
         /// <summary>
         /// Returns plain text temperature to caller
         /// </summary>
-        private string GetPlainTextTemperature()
+        private static string GetPlainTextTemperature()
         {
             try
             {

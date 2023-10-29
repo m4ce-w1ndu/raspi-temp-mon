@@ -1,10 +1,10 @@
 namespace TempMonitor
 {
-    public class TemperatureLogger : BackgroundService
+    public class TempLogger : BackgroundService
     {
-        private readonly ILogger<TemperatureLogger> _logger;
+        private readonly ILogger<TempLogger> _logger;
 
-        public TemperatureLogger(ILogger<TemperatureLogger> logger)
+        public TempLogger(ILogger<TempLogger> logger)
         {
             _logger = logger;
         }

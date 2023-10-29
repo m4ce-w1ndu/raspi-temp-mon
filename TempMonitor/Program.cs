@@ -7,7 +7,7 @@ namespace TempMonitor
             IHost host = Host.CreateDefaultBuilder(args)
                 .ConfigureServices(services =>
                 {
-                    services.AddHostedService<TemperatureLogger>();
+                    services.AddHostedService<TempLogger>();
                 })
                 .Build();
 

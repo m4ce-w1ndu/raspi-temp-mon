@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempMonitor", "TempMonitor\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempReader", "TempReader\TempReader.csproj", "{0FF9D400-63CA-4CD4-9665-2E849F56C56B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempViewer", "TempViewer\TempViewer.csproj", "{D156D367-05CC-47AF-9F0C-618EE15A06B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,14 @@ Global
 		{0FF9D400-63CA-4CD4-9665-2E849F56C56B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0FF9D400-63CA-4CD4-9665-2E849F56C56B}.Release|ARM64.ActiveCfg = Release|Any CPU
 		{0FF9D400-63CA-4CD4-9665-2E849F56C56B}.Release|ARM64.Build.0 = Release|Any CPU
+		{D156D367-05CC-47AF-9F0C-618EE15A06B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D156D367-05CC-47AF-9F0C-618EE15A06B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D156D367-05CC-47AF-9F0C-618EE15A06B4}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{D156D367-05CC-47AF-9F0C-618EE15A06B4}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{D156D367-05CC-47AF-9F0C-618EE15A06B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D156D367-05CC-47AF-9F0C-618EE15A06B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D156D367-05CC-47AF-9F0C-618EE15A06B4}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{D156D367-05CC-47AF-9F0C-618EE15A06B4}.Release|ARM64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

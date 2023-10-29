@@ -1,5 +1,8 @@
 ﻿namespace TempReader
 {
+    /// <summary>
+    /// Available temperature scales
+    /// </summary>
     public enum TempScale
     {
         Celsius,
@@ -7,6 +10,9 @@
         Kelvin
     }
 
+    /// <summary>
+    /// Generic temperature reader interface
+    /// </summary>
     public interface IReader
     {
         /// <summary>

@@ -1,23 +1,19 @@
 ﻿namespace TempReader
 {
+    public enum TempScale
+    {
+        Celsius,
+        Farenheit,
+        Kelvin
+    }
+
     public interface IReader
     {
         /// <summary>
-        /// Reads the temperature in Celsius
+        /// Returns a temperature in the given input scale
         /// </summary>
-        /// <returns>Floating point Celsius value</returns>
-        float ReadCelsius();
-
-        /// <summary>
-        /// Reads the temperature in Farenheit
-        /// </summary>
-        /// <returns>Floating point Farenheit value</returns>
-        float ReadFarenheit();
-
-        /// <summary>
-        /// Reads the temperature in Kelvin
-        /// </summary>
-        /// <returns>Floating point Kelvin value</returns>
-        float ReadKelvin();
+        /// <param name="scale">Desired temperature scale</param>
+        /// <returns>Floating point value representing temperature in the chosen scale</returns>
+        float Read(TempScale scale);
     }
 }

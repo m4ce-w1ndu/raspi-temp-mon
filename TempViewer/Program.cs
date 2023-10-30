@@ -34,7 +34,7 @@ namespace TempViewer
         /// <summary>
         /// Low temperature threshold in Farenheit
         /// </summary>
-        const float LOW_TEMP_THRESHOLD_F = 32.0f;
+        const float LOW_TEMP_THRESHOLD_F = (LOW_TEMP_THRESHOLD_C * 9.0f / 5.0f) + 32.0f;
 
         /// <summary>
         /// Low temperature threshold in Kelvin
@@ -49,7 +49,7 @@ namespace TempViewer
         /// <summary>
         /// Mid temperature threshold in Farenheit
         /// </summary>
-        const float MID_TEMP_THRESHOLD_F = 113.0f;
+        const float MID_TEMP_THRESHOLD_F = (MID_TEMP_THRESHOLD_C * 9.0f / 5.0f) + 32.0f;
 
         /// <summary>
         /// Mid temperature threshold in Kelvin
@@ -64,7 +64,7 @@ namespace TempViewer
         /// <summary>
         /// High temperature threshold in Farenheit
         /// </summary>
-        const float HIGH_TEMP_THRESHOLD_F = 149.0f;
+        const float HIGH_TEMP_THRESHOLD_F = (HIGH_TEMP_THRESHOLD_C * 9.0f / 5.0f) + 32.0f;
 
         /// <summary>
         /// High temperature threshold in Kelvin
@@ -87,6 +87,10 @@ namespace TempViewer
                   });
         }
 
+        /// <summary>
+        /// Prints the temperature with the correct scale and color
+        /// based on current temperature reading
+        /// </summary>
         static void PrintTemp(float temp, TempScale scale)
         {
             Console.Write("Current CPU temperature: ");
@@ -104,6 +108,9 @@ namespace TempViewer
             Console.ResetColor();
         }
 
+        /// <summary>
+        /// Returns a formatted temperature string
+        /// </summary>
         static string TempString(float temp, TempScale scale)
         {
             return scale switch
@@ -115,6 +122,9 @@ namespace TempViewer
             };
         }
 
+        /// <summary>
+        /// Checks low temperature thresholds
+        /// </summary>
         static bool IsLowTemp(float temp, TempScale scale)
         {
             return ((temp >= LOW_TEMP_THRESHOLD_C && temp < MID_TEMP_THRESHOLD_C) && scale == TempScale.Celsius) ||
@@ -122,6 +132,10 @@ namespace TempViewer
                    ((temp >= LOW_TEMP_THRESHOLD_K && temp < MID_TEMP_THRESHOLD_K) && scale == TempScale.Kelvin);
         }
 
+
+        /// <summary>
+        /// Checks medium temperature thresholds
+        /// </summary>
         static bool IsMidTemp(float temp, TempScale scale)
         {
             return ((temp >= MID_TEMP_THRESHOLD_C && temp < HIGH_TEMP_THRESHOLD_C) && scale == TempScale.Celsius) ||
@@ -129,6 +143,9 @@ namespace TempViewer
                    ((temp >= MID_TEMP_THRESHOLD_K && temp < HIGH_TEMP_THRESHOLD_K) && scale == TempScale.Kelvin);
         }
 
+        /// <summary>
+        /// Checks high temperature thresholds
+        /// </summary>
         static bool IsHighTemp(float temp, TempScale scale)
         {
             return (temp >= HIGH_TEMP_THRESHOLD_C && scale == TempScale.Celsius) ||

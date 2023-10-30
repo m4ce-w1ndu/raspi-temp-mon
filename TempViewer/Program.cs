@@ -54,7 +54,7 @@ namespace TempViewer
         /// <summary>
         /// Mid temperature threshold in Kelvin
         /// </summary>
-        const float MID_TEMP_THRESHOLD_K = -(ITempReader.ABSOLUTE_ZERO_TEMP + MID_TEMP_THRESHOLD_C);
+        const float MID_TEMP_THRESHOLD_K = -(ITempReader.ABSOLUTE_ZERO_TEMP) + MID_TEMP_THRESHOLD_C;
 
         /// <summary>
         /// High temperature threshold in Celsius
@@ -69,7 +69,7 @@ namespace TempViewer
         /// <summary>
         /// High temperature threshold in Kelvin
         /// </summary>
-        const float HIGH_TEMP_THRESHOLD_K = (-ITempReader.ABSOLUTE_ZERO_TEMP + HIGH_TEMP_THRESHOLD_C);
+        const float HIGH_TEMP_THRESHOLD_K = (-ITempReader.ABSOLUTE_ZERO_TEMP) + HIGH_TEMP_THRESHOLD_C;
 
         static void Main(string[] args)
         {
